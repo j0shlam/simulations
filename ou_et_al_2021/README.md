@@ -34,7 +34,7 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
   10. `gmx mdrun -v -deffnm nvt`
   11. `gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr`
   12. `gmx mdrun -v -deffnm npt`
-  * production:
+  * Production:
   13. `gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr`
   14. `gmx mdrun -v -deffnm md_0_1`
   15. Correct for periodicity and trajectory `gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_noPBC.xtc -pbc mol -center`
