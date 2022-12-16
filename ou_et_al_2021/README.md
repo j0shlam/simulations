@@ -8,3 +8,7 @@ Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work. (
    * `atp.pdb`: ATP PDB file downloaded from the charmm-gui nucleic acid database archive - https://charmm-gui.org/?doc=archive&lib=csml 
    * **Molecular Dynamic Parameter Files - MDP**:
 
+# Prep.
+
+# gromacs
+Gromacs Version - 2021.5
