@@ -1,4 +1,4 @@
-# ou_etal_2021
+# ou_et_al_2021
 Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work. (https://pubs.acs.org/doi/10.1021/jacsau.1c00316)
 
 # Files
