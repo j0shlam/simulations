@@ -30,14 +30,14 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
   6. Add 150mM NaCl to system `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname SOD -nname CLA -conc 0.15 -neutral`
   7. Generate starting structure for energy minimization `gmx grompp -f minim.mdp -c 1iee_solv_ions.gro -p topol.top -o em.tpr`
   8. Run `gmx mdrun -v -deffnm em`
-  9. `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr`
+  9. Repeat with equilibration with restraints `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr`
   10. `gmx mdrun -v -deffnm nvt`
   11. `gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr`
   12. `gmx mdrun -v -deffnm npt`
   * production:
   13. `gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr`
   14. `gmx mdrun -v -deffnm md_0_1`
-  15. `gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_noPBC.xtc -pbc mol -center`
+  15. Correct for periodicity and trajectory `gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_noPBC.xtc -pbc mol -center`
   
 # gromacs
 Gromacs Version - 2021.5
