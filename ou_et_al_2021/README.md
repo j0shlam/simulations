@@ -42,12 +42,16 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
   14. `gmx mdrun -v -deffnm md_0_1`
   15. Correct for periodicity and trajectory `gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_noPBC.xtc -pbc mol -center`
 
-* ATP Mg Complex.
+* ATP Mg Complex. Method 1:
 For ATP-Mg Complex. Step 6.1 is added as:
   
  6.1. Add 20 Mg 2+ to system: `gmx genion -s ions.tpr -o 1iee_solv_mg.gro -p topol.top -pname MG -pq 2 -np 20`
 
  6.2.  Add 150mM NaCl to system `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname SOD -nname CLA -conc 0.15 -neutral`
+ 
+ * ATP Mg Complex. Method 2:
+ 
+ Simulate ATP and MG 2+ without protein for 100ns.
 
 # gromacs
 Gromacs Version - 2021.5
