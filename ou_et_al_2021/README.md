@@ -1,5 +1,5 @@
 # ou_et_al_2021
-Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work. (https://pubs.acs.org/doi/10.1021/jacsau.1c00316)
+Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work. (https://pubs.acs.org/doi/10.1021/jacsau.1c00316), complimented by *Hu et al (2022)* (https://pubs.acs.org/doi/pdf/10.1021/acs.jpcb.2c01478).
 
 # files
 * `charmm36_ljpme-jul2021.ff` - CHARMM36 force field - 2021
@@ -12,6 +12,9 @@ Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work. (
    * `nvt.mdp` - mdp file for equilibration for NVT ensemble at 300 K.
    * `npt.mdp` - mdp file for equilibration for NPT ensemble at 1 bar.
    * `md.mdp` - mdp file for production MD for 400 ns. 
+ 
+* `atp_mg` - ATP simulation files (with Mg 2+) *Hu et al (2022)*
+   * 
  
 notes from *ou_et_al* for mdp: 
 - barostat - parrinello-rahman
