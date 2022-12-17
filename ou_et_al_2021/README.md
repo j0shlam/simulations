@@ -7,7 +7,7 @@ Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work. (
    * `1iee_clean.pdb` - lyzozyme from PDB code: 1IEE, with removed crystallized water and ions using the grep command on HOH CL NA respectively.
    * `atp.pdb` - ATP PDB file downloaded from the CHARMM-GUI Archive - Small molecule database:
     https://charmm-gui.org/?doc=archive&lib=csml 
-   * `ions.mdp` - ions mdp to create a tpr to add ions within PDB. 
+   * `ions.mdp` - ions mdp to create a tpr to add ions within PDB. (File can be empty)
    * `minim.mdp` - mdp file for energy minizimation, for 10,000 steps. 
    * `nvt.mdp` - mdp file for equilibration for NVT ensemble at 300K.
    * `npt.mdp` - mdp file for equilibration for NPT ensemble at 1 bar.
