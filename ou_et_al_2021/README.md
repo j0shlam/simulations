@@ -9,9 +9,9 @@ Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work. (
     https://charmm-gui.org/?doc=archive&lib=csml 
    * `ions.mdp` - ions mdp to create a tpr to add ions within PDB. (contents don't matter)
    * `minim.mdp` - mdp file for energy minizimation, for 10,000 steps. 
-   * `nvt.mdp` - mdp file for equilibration for NVT ensemble at 300K.
+   * `nvt.mdp` - mdp file for equilibration for NVT ensemble at 300 K.
    * `npt.mdp` - mdp file for equilibration for NPT ensemble at 1 bar.
-   * `md.mdp` - mdp file for production MD for 400ns. 
+   * `md.mdp` - mdp file for production MD for 400 ns. 
  
 notes from *ou_et_al* for mdp: 
 - barostat - parrinello-rahman
