@@ -16,7 +16,7 @@ Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work. (
 notes from *ou_et_al* for mdp: 
 - barostat - parrinello-rahman
 - thermostat - berendsen
-- 12 Angstrom cutoff distance
+- 12 angstrom cutoff distance
 - LINCS algorithm to restrain bonds
 
 # method.
