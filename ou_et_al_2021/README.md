@@ -78,8 +78,8 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
 
 * Step 17 - X = Prepare ATP-Mg PDB for Protein mdrun 
 
- 17. `gmx trjconv -s md.tpr -f md.xtc -o atp_mg.pdb -pbc whole -conect`
- 18. 
+ 17. `gmx trjconv -s md.tpr -f md.xtc -o atp_mg.pdb -pbc mol -center -conect`
+ 18. In VMD, selected frame in which ATP interacts with Mg and within VMD export a PDB file without the NaCl solution. 
  19. Follow Step 1. onwards from method. for ATP mdrun
 
 <img src="atp_mg/atpmg.JPG">
