@@ -72,8 +72,9 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
 
 * Step 17 - X = Prepare ATP-Mg PDB for Protein mdrun 
 
- 17.
- 18. Follow Step 1. onwards from method. for ATP mdrun
+ 17. `gmx trjconv -s md.tpr -f md.xtc -o atp_mg.pdb -pbc whole -conect`
+ 18. 
+ 19. Follow Step 1. onwards from method. for ATP mdrun
 
 # method.2 for ATP-Mg mdrun:
 method was trialled as *Hu et al (2022)* uses this method... (https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.2c01478)
