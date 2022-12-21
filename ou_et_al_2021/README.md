@@ -14,7 +14,13 @@ Reproduction of md ATP simulation with lysozyme from *Ou et al (2021)*'s work. (
    * `md.mdp` - mdp file for production MD for 400 ns. 
  
 * `atp_mg` - ATP simulation files (with Mg 2+)
-   * 
+   * `atp.pdb`
+   * `ions.mdp`
+   * `minim.mdp`
+   * `nvt.mdp` NVT, NPT and MD files updated with thermal coupling of ATP and Non ATP group from index.ndx
+   * `npt.mdp`
+   * `md.mdp` updated for 100 ns
+   * `index.ndx` Example Index.ndx file
  
 notes from *ou_et_al* for mdp: 
 - barostat - parrinello-rahman
@@ -87,4 +93,4 @@ For ATP-Mg Complex. Step 6.1 is added as:
  
 and continue with ATP mdrun method. 
 # gromacs
-Gromacs Version - 2021.5
+Gromacs version - 2021.5
