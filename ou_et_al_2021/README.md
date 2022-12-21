@@ -68,7 +68,7 @@ and continue with ATP mdrun method.
 
 Step 8. Generate Index File as no protein are present for thermal coupling groups
  
- 8.`gmx make_ndx -f atp_solv_ions2.gro` generate a non-atp group, where as index.ndx file has a [non atp] group to be used to couple in NVT,NPT and MD runs. 
+ 8.`gmx make_ndx -f atp_solv_ions2.gro` generate a non-atp group, where as index.ndx file has a [non ATP] group to be used to couple in NVT, NPT and MD runs. 
 
 Step 9-X = energy minimization and equilibration  
 
