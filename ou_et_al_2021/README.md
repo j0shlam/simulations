@@ -51,7 +51,7 @@ For ATP-Mg Complex. Step 6.1 is added as:
 
  6.2.  Add 150mM NaCl to system `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname SOD -nname CLA -conc 0.15 -neutral`
  
-And continue with ATP mdrun method. 
+and continue with ATP mdrun method. 
 
  # method.2 for ATP-Mg mdrun:
  
