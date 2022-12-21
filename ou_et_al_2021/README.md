@@ -5,7 +5,7 @@ Reproduction of md ATP simulation with lysozyme from *Ou et al (2021)*'s work. (
 * `charmm36_ljpme-jul2021.ff` - CHARMM36 force field - 2021
 * `atp_pro` - ATP simulation files (without Mg 2+)
    * `1iee_clean.pdb` - lyzozyme from PDB code: 1IEE, removed crystallized water and ions using the grep command on HOH CL NA respectively.
-   * `atp.pdb` - ATP PDB file downloaded from the CHARMM-GUI Archive - Small molecule database:
+   * `atp.pdb` - ATP PDB sourced from CHARMM-GUI Archive - Small molecule database:
     https://charmm-gui.org/?doc=archive&lib=csml 
    * `ions.mdp` - ions mdp to create a tpr to add ions within PDB. (contents don't matter)
    * `minim.mdp` - mdp file for energy minizimation, for 10,000 steps. 
