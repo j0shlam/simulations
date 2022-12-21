@@ -83,6 +83,7 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
  19. Follow Step 1. onwards from method. for ATP mdrun
 
 <img src="atp_mg/atpmg.JPG" width="200" > 
+
 Image shown as frame exported as `atpmg.pdb`.
 
 # method.2 for ATP-Mg mdrun:
