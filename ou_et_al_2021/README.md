@@ -59,11 +59,21 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
  
  8. `gmx make_ndx -f atp_solv_ions2.gro` generate a [non ATP] group to be used to couple in NVT, NPT and MD runs. 
 
-* Step 9-X = energy minimization and equilibration  
+* Step 9-16 = energy minimization, equilibration and production
 
- 9. `gmx grompp -f minim.mdp -c atp_solv_ions2.gro -p topol.top -o em.tpr`
- 10. x
- 11. 
+ 9. `gmx grompp -f minim.mdp -c atp_solv_ions2.gro -p topol.top -o em.tpr -n index.ndx`
+ 10. `gmx mdrun -v -deffnm em`
+ 11. `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -n index.ndx`
+ 12. `gmx mdrun -v -deffnm nvt`
+ 13. `gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr`
+ 14. `gmx mdrun -v -deffnm npt`
+ 15. `gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr`
+ 16. `gmx mdrun -v -deffnm md_0_1`
+
+* Step 17 - X = Prepare ATP-Mg PDB for Protein mdrun 
+
+ 17.
+ 18. Follow Step 1. onwards from method. for ATP mdrun
 
 # method.2 for ATP-Mg mdrun:
 method was trialled as *Hu et al (2022)* uses this method... (https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.2c01478)
