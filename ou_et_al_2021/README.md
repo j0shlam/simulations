@@ -1,5 +1,5 @@
 # ou_et_al_2021
-Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work. (https://pubs.acs.org/doi/10.1021/jacsau.1c00316)
+Reproduction of md ATP simulation with lysozyme from *Ou et al (2021)*'s work. (https://pubs.acs.org/doi/10.1021/jacsau.1c00316)
 
 # files
 * `charmm36_ljpme-jul2021.ff` - CHARMM36 force field - 2021
@@ -22,7 +22,7 @@ notes from *ou_et_al* for mdp:
 - 12 angstrom cutoff distance
 - LINCS algorithm to restrain bonds
 
-# method. for general ATP MD run
+# method. for ATP mdrun
 notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of 12.6nm per side and solvated with TIP3P water model. 
   * Setting up the simulation within gromacs via:
   1. Initial structure of lysozyme and ATP `gmx insert-molecules -f 1iee_clean.pdb -ci atp.pdb -o 1iee_atp.gro -nmol 20 `
@@ -42,7 +42,7 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
   14. `gmx mdrun -v -deffnm md_0_1`
   15. Correct for periodicity and trajectory `gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_noPBC.xtc -pbc mol -center`
 
-# method. for general ATP-MG MD run
+# method. for ATP-Mg mdrun
 
 * ATP Mg Complex. Method 1:
 For ATP-Mg Complex. Step 6.1 is added as:
