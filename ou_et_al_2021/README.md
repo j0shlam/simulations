@@ -66,11 +66,11 @@ and continue with ATP mdrun method.
  6. `gmx grompp -f ions.mdp -c atp_solv_ions.gro -p topol.top -o ions2.tpr`
  7. `gmx genion -s ions2.tpr -o atp_solv_ions2.gro -p topol.top -pname SOD -nname CLA -conc 0.15 -neutral`
 
-Step 8. Generate Index File as no protein are present for thermal coupling groups
+* Step 8. Generate Index File as no protein are present for thermal coupling groups
  
  8.`gmx make_ndx -f atp_solv_ions2.gro` generate a non-atp group, where as index.ndx file has a [non ATP] group to be used to couple in NVT, NPT and MD runs. 
 
-Step 9-X = energy minimization and equilibration  
+* Step 9-X = energy minimization and equilibration  
 
  9. `gmx grompp -f minim.mdp -c atp_solv_ions2.gro -p topol.top -o em.tpr`
  10. x
