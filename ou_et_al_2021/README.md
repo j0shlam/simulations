@@ -20,7 +20,7 @@ Reproduction of md ATP simulation with lysozyme from *Ou et al (2021)*'s work. (
    * `nvt.mdp` NVT, NPT and MD files updated with thermal coupling of ATP and Non ATP group from index.ndx
    * `npt.mdp`
    * `md.mdp` updated for 100 ns
-   * `index.ndx` *example* index.ndx file with non-atp group
+   * `index.ndx` *example* index.ndx file with [non-ATP] group
  
 notes from *ou_et_al* for mdp: 
 - barostat - parrinello-rahman
