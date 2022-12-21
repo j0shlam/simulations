@@ -22,7 +22,7 @@ notes from *ou_et_al* for mdp:
 - 12 angstrom cutoff distance
 - LINCS algorithm to restrain bonds
 
-# method.
+# method. for general ATP MD run
 notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of 12.6nm per side and solvated with TIP3P water model. 
   * Setting up the simulation within gromacs via:
   1. Initial structure of lysozyme and ATP `gmx insert-molecules -f 1iee_clean.pdb -ci atp.pdb -o 1iee_atp.gro -nmol 20 `
@@ -41,6 +41,8 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
   13. `gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr`
   14. `gmx mdrun -v -deffnm md_0_1`
   15. Correct for periodicity and trajectory `gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_noPBC.xtc -pbc mol -center`
+
+# method. for general ATP-MG MD run
 
 * ATP Mg Complex. Method 1:
 For ATP-Mg Complex. Step 6.1 is added as:
