@@ -82,7 +82,8 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
  18. In VMD, selected frame in which ATP interacts with Mg and within VMD export a PDB file without the NaCl solution. 
  19. Follow Step 1. onwards from method. for ATP mdrun
 
-<img src="atp_mg/atpmg.JPG">
+<img src="atp_mg/atpmg.JPG" width="200" > 
+Image shown as frame exported as `atpmg.pdb`.
 
 # method.2 for ATP-Mg mdrun:
 method was trialled as *Hu et al (2022)* uses this method... (https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.2c01478)
