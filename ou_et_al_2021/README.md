@@ -55,7 +55,7 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
  6. `gmx grompp -f ions.mdp -c atp_solv_ions.gro -p topol.top -o ions2.tpr`
  7. `gmx genion -s ions2.tpr -o atp_solv_ions2.gro -p topol.top -pname SOD -nname CLA -conc 0.15 -neutral`
 
-* Step 8. Generate `index.ndx` file as no protein are present for thermal coupling groups
+* Step 8. Generate `index.ndx` file as no protein is present for thermal coupling groups
  
  8. `gmx make_ndx -f atp_solv_ions2.gro` generate a [non ATP] group to be used to couple in NVT, NPT and MD runs. 
 
