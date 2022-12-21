@@ -67,7 +67,7 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
  12. `gmx mdrun -v -deffnm nvt`
  13. `gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr`
  14. `gmx mdrun -v -deffnm npt`
- 15. `gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr`
+ 15. `gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr -n index.ndx`
  16. `gmx mdrun -v -deffnm md_0_1`
 
 * Step 17 - X = Prepare ATP-Mg PDB for Protein mdrun 
