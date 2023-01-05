@@ -1,5 +1,5 @@
 # ou_et_al_2021
-Reproduction of md ATP simulation with lysozyme from *Ou et al (2021)*'s work. (https://pubs.acs.org/doi/10.1021/jacsau.1c00316)
+Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work. (https://pubs.acs.org/doi/10.1021/jacsau.1c00316)
 
 # files
 * `charmm36_ljpme-jul2021.ff` - CHARMM36 force field - 2021
