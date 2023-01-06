@@ -6,7 +6,7 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 | System | ATP | Mg 2+ | Pyrene | NA + | CL -  | Simulation time (ns) | replicas |
 |-  | - | -| -| - | - | - | - |
 | ATP | 30 | 30 | 0 | 68 | 8 | 1000| 1 |
-| ATP Pyrene  | 30 | 30 | 10 | 68 | 8 | 1000 | 3 |
+| ATP pyrene  | 30 | 30 | 10 | 68 | 8 | 1000 | 3 |
 
 # files
 * `forcefield.ff` - CHARMM36 forcefield with modified nucleotide parameters. 
