@@ -8,13 +8,22 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 
 # files
 * `forcefield.ff` - CHARMM36 forcefield 
+* atp_pan
+   * `old_topol.top` - original topology file without modified nucleotide charges
+   * `atp.pdb` - ATP PDB sourced from CHARMM-GUI Archive - Small molecule database: https://charmm-gui.org/?doc=archive&lib=csml
 
 # ATP simulation
 * `gmx insert-molecules -ci atp.pdb -o atp_30box.pdb -box 5 5 5 -nmol 30`
 * `gmx pdb2gmx -f atp_30box.pdb -o atp30_pro.gro -water tip3p`
-# modified nucleotide parameters 
-* `grep -c -e -0.9 topol.top` count all lines which have -0.9 (should be 90 3x30)
-* `grep -c -e -"all charges on PO4 group".top` 
+# modified nucleotide charges (charmm36)
+charges required to be scaled within `topol.top`: 
+
+| nr | type | resnr | residue | atom | cgnr  | charge | mass |
+|-  | - | -| -| - | - | - | - |
+| 28 | CN8B | 1 | ATP | C5' | 5 | -0.08 | 12.011 |
+| 28 new charge | CN8B | 1 | ATP | C5' | 5 | -0.048 | 12.011 |
+
+This is performed for all cgnr groups of multiple of 5s. (this represents the phosphate group) 
 
 
 
