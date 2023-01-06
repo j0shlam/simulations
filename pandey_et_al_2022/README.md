@@ -27,7 +27,7 @@ charges required to be scaled within `topol.top`, shown via an example below. a 
 | 28 | CN8B | 1 | ATP | C5' | 5 | -0.08 | 12.011 |
 | 28 new charge | CN8B | 1 | ATP | C5' | 5 | -0.048 | 12.011 |
 
-This is performed for all cgnr groups of multiple of 5s (this can vary but in my case nr 28 - 43 were scaled). This represents the phosphate group that contributes a charge of -4, rescaled to -2.4.
+This is performed for all cgnr groups of multiple of 5s (this can vary but in my case nr 28 - 43 were scaled). This represents the phosphate group that contributes a charge of -4, rescaled to -2.4. The example topology for this simulation is `scaledtopol.top`.
 
 
 
