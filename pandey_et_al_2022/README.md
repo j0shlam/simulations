@@ -27,7 +27,7 @@ charges required to be scaled within `topol.top`, shown via an example below. a 
 | 28 | CN8B | 1 | ATP | C5' | 5 | -0.08 | 12.011 |
 | 28 new charge | CN8B | 1 | ATP | C5' | 5 | -0.048 | 12.011 |
 
-This is performed for all cgnr groups of multiple of 5s. (this represents the phosphate group) 
+This is performed for all cgnr groups of multiple of 5s (this can vary). (this represents the phosphate group) 
 
 
 
