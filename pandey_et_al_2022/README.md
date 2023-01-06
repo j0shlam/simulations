@@ -13,9 +13,13 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
    * `atp.pdb` - ATP PDB sourced from CHARMM-GUI Archive - Small molecule database: https://charmm-gui.org/?doc=archive&lib=csml
 
 # ATP simulation
-* `gmx insert-molecules -ci atp.pdb -o atp_30box.pdb -box 5 5 5 -nmol 30`
-* `gmx pdb2gmx -f atp_30box.pdb -o atp30_pro.gro -water tip3p`
-# modified nucleotide charges (charmm36)
+* `gmx insert-molecules -ci atp.pdb -o atp_30box.pdb -box 5 5 5 -nmol 30` - generates a 5nm box with 30 atp molecules 
+* `gmx pdb2gmx -f atp_30box.pdb -o atp30_pro.gro -water tip3p` - generates topology file
+* topology is modified to scale charges refer to modified nucelotide charges below.
+* `.`
+* `.`
+* `.`
+## modified nucleotide charges (charmm36)
 charges required to be scaled within `topol.top`: 
 
 | nr | type | resnr | residue | atom | cgnr  | charge | mass |
