@@ -7,8 +7,13 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 | ATP & pyrene  | 30 | 30 | 10 | 68 | 8 | 1000 | 3 |
 
 # files
-* `forcefield.ff` - CHARMM36 forcefield with modified nucleotide parameters. 
+* `forcefield.ff` - CHARMM36 forcefield 
 
 # ATP simulation
+* `gmx insert-molecules -ci atp.pdb -o atp_30box.pdb -box 5 5 5 -nmol 30`
+* `gmx pdb2gmx -f atp_30box.pdb -o atp30_pro.gro -water tip3p`
+# Modified nucleotide parameters 
+
+
 
 # ATP Pyrene Simulation
