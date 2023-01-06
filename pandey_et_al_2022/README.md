@@ -20,7 +20,7 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 * `.`
 * `.`
 ## modified nucleotide charges (charmm36)
-charges required to be scaled within `topol.top`: 
+charges required to be scaled within `topol.top`, shown via an example below. A charge scaling factor of 0.6 was used.  
 
 | nr | type | resnr | residue | atom | cgnr  | charge | mass |
 |-  | - | -| -| - | - | - | - |
