@@ -7,7 +7,7 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 | ATP & pyrene  | 30 | 30 | 10 | 68 | 8 | 1000 | 3 |
 
 # files
-* `forcefield.ff` - CHARMM36 forcefield 
+* `charmm36_ljpme-jul2021.ff` - CHARMM36 forcefield 
 * atp_pan
    * `old_topol.top` - original topology file without modified nucleotide charges
    * `atp.pdb` - ATP PDB sourced from CHARMM-GUI Archive - Small molecule database: https://charmm-gui.org/?doc=archive&lib=csml
