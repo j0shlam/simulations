@@ -12,7 +12,9 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 # ATP simulation
 * `gmx insert-molecules -ci atp.pdb -o atp_30box.pdb -box 5 5 5 -nmol 30`
 * `gmx pdb2gmx -f atp_30box.pdb -o atp30_pro.gro -water tip3p`
-# Modified nucleotide parameters 
+# modified nucleotide parameters 
+* `grep -c -e -0.9 topol.top` count all lines which have -0.9 (should be 90 3x30)
+* `grep -c -e -"all charges on PO4 group".top` 
 
 
 
