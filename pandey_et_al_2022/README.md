@@ -20,7 +20,7 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 * topology is modified to scale charges refer to modified nucelotide charges below.
 * `gmx solvate -cp atp_30box.gro -cs spc216.gro -o atp_solv.gro -p topol.top`
 * `gmx grompp -f ions.mdp -c atp_solv.gro -p topol.top -o ions.tpr`
-* `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname SOD -nname CLA -conc 0.1 -neutral`
+* `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname SOD -pq 0.6 -nname CLA -nq 0.6 -conc 0.1 -neutral`
 # ATP simulation with Mg
 * include: `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname MG -pq 1.2 -np 30` before NaCl buffer.
 ## modified nucleotide charges (charmm36)
