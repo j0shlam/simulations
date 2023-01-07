@@ -7,7 +7,8 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 | ATP & pyrene  | 30 | 30 | 10 | 68 | 8 | 1000 | 3 |
 
 # files
-* `charmm36_ljpme-jul2021.ff` - CHARMM36 forcefield 
+* `charmm36_ljpme-jul2021.ff` - CHARMM36 forcefield with modified ion charges
+   * `ions.itp` - modified charges on CLA SOD MG by scaling of 0.6
 * atp_pan
    * `old_topol.top` - original topology file without modified nucleotide charges
    * `scaledtopol.top` - scaled charge topology file 
