@@ -17,7 +17,7 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 * `gmx insert-molecules -ci atp.pdb -o atp_30box.pdb -box 5 5 5 -nmol 30` - generates a 5nm box with 30 atp molecules 
 * `gmx pdb2gmx -f atp_30box.pdb -o atp30_pro.gro -water tip3p` - generates topology file
 * topology is modified to scale charges refer to modified nucelotide charges below.
-* `.`
+* `gmx solvate -cp atp_30box.gro -cs spc216.gro -o atp_solv.gro -p topol.top`
 * `.`
 * `.`
 ## modified nucleotide charges (charmm36)
