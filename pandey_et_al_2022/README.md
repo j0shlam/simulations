@@ -21,8 +21,9 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 * `gmx solvate -cp atp30_pro.gro -cs spc216.gro -o atp_solv.gro -p topol.top`
 * `gmx grompp -f ions.mdp -c atp_solv.gro -p topol.top -o ions.tpr`
 * `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname SOD -np 128 -nname CLA -nn 8 -rmin 0.5`
-* ***NOTE: using a smaller radius for ions and non solvent distance could cause crystal like structures...***  
-* ***Maybe be useful to use -gmx insert-molecules instead.***
+NOTE: using a smaller radius for ions and non solvent distance could cause crystal like structures...*  
+Maybe be useful to use '-gmx insert-molecules instead.'*
+* 
 # ATP simulation with Mg
 * include: `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname MG -pq 1.2 -np 30` before NaCl buffer.
 ## modified nucleotide charges (charmm36)
