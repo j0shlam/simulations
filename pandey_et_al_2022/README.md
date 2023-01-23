@@ -18,9 +18,11 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 * `gmx insert-molecules -ci atp.pdb -o atp_30box.pdb -box 5 5 5 -nmol 30` - generates a 5nm box with 30 atp molecules 
 * `gmx pdb2gmx -f atp_30box.pdb -o atp30_pro.gro -water tip3p` - generates topology file
 * topology is modified to scale charges refer to modified nucelotide charges below.
-* `gmx solvate -cp atp_30box.gro -cs spc216.gro -o atp_solv.gro -p topol.top`
+* `gmx solvate -cp atp30_pro.gro -cs spc216.gro -o atp_solv.gro -p topol.top`
 * `gmx grompp -f ions.mdp -c atp_solv.gro -p topol.top -o ions.tpr`
-* `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname SOD -pq 0.6 -nname CLA -nq 0.6 -conc 0.1 -neutral`
+* `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname SOD -np 128 -nname CLA -nn 8`
+* 
+*
 # ATP simulation with Mg
 * include: `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname MG -pq 1.2 -np 30` before NaCl buffer.
 ## modified nucleotide charges (charmm36)
@@ -37,6 +39,8 @@ This is performed for all cgnr groups of multiple of 5s (this can vary but in my
 |-  | - | -| - | - | - |
 | molecules | 30 | 30 | 68 | 8 | 136| 
 | scaled charge  | -72 | 36 | 40.8 | -4.8 | 0 | 
+| molecules 2| 30 | 0 | 128 | 8 | 118 | 
+| scaled charge 2  | -72 | 0 | 76.8 | -4.8 | 0 | 
 
 
 
