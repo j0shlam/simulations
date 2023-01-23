@@ -21,9 +21,17 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 * `gmx solvate -cp atp30_pro.gro -cs spc216.gro -o atp_solv.gro -p topol.top`
 * `gmx grompp -f ions.mdp -c atp_solv.gro -p topol.top -o ions.tpr`
 * `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname SOD -np 128 -nname CLA -nn 8 -rmin 0.5`
-NOTE: using a smaller radius for ions and non solvent distance could cause crystal like structures...*  
-Maybe be useful to use '-gmx insert-molecules instead.'*
-* 
+NOTE: using a smaller radius for ions and non solvent distance could cause crystal like structures..
+Maybe be useful to use `-gmx insert-molecules instead.`
+* `gmx grompp -f minim.mdp -c 1iee_solv_ions.gro -p topol.top -o em.tpr`
+* `gmx mdrun -v -deffnm em`
+* `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr`
+* `gmx mdrun -v -deffnm nvt`
+* `gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr`
+* `gmx mdrun -v -deffnm npt`
+* `gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr`
+* `gmx mdrun -v -deffnm md_0_1`
+* `gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_noPBC.xtc -pbc mol -center`
 # ATP simulation with Mg
 * include: `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname MG -pq 1.2 -np 30` before NaCl buffer.
 ## modified nucleotide charges (charmm36)
