@@ -56,7 +56,7 @@ This is performed for all cgnr groups of multiple of 5s (this can vary but in my
 
 # ATP Pyrene Simulation
 
-# Notes from Pandey
+### Notes from Pandey
 
 Molecular Dynamics Simulations
 We ran simulations with 30 negatively charged NTPs, 10 pyrene molecules solvated in water, and a bulk NaCl concentration of 0.1 M. The concentrations of NTPs and pyrenes were 400 and 130 mM, respectively. The concentrations used in the simulations are much higher than the concentration at which ATP starts acting as a hydrotrope. Simulating lower concentrations in MD are untenable because of the need to simulate very large simulation boxes containing few NTPs and an excessive number of water molecules. The molecules were initially distributed randomly in the simulation box, and the system was solvated with TIP3P (24) water molecules. A Mg2+ ion was placed close to the phosphate group of each NTP. ATP always binds a Mg2+ ion in its active form, and this is likely for the other NTPs as well. (17,25−27) To collect better statistics, we simulated three replicas for each system except the simulation of a single pyrene molecule in water. The list of performed simulations is shown in Table 1.
