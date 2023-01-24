@@ -25,7 +25,7 @@ NOTE: using a smaller radius for ions and non solvent distance could cause cryst
 Maybe be useful to use `-gmx insert-molecules instead.`
 * `gmx grompp -f minim.mdp -c 1iee_solv_ions.gro -p topol.top -o em.tpr`
 * `gmx mdrun -v -deffnm em`
-* Make index for Non ATP group `gmx make_ndx -f em.gro`
+* Make index for [Non ATP] group `gmx make_ndx -f em.gro`
 * `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -n index.ndx`
 * `gmx mdrun -v -deffnm nvt`
 * `gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr -n index.ndx`
