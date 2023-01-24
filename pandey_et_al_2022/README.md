@@ -25,11 +25,12 @@ NOTE: using a smaller radius for ions and non solvent distance could cause cryst
 Maybe be useful to use `-gmx insert-molecules instead.`
 * `gmx grompp -f minim.mdp -c 1iee_solv_ions.gro -p topol.top -o em.tpr`
 * `gmx mdrun -v -deffnm em`
-* `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr`
+* Make index for Non ATP group `gmx make_ndx -f em.gro`
+* `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -n index.ndx`
 * `gmx mdrun -v -deffnm nvt`
-* `gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr`
+* `gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr -n index.ndx`
 * `gmx mdrun -v -deffnm npt`
-* `gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr`
+* `gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr -n index.ndx`
 * `gmx mdrun -v -deffnm md_0_1`
 * `gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_noPBC.xtc -pbc mol -center`
 # ATP simulation with Mg
