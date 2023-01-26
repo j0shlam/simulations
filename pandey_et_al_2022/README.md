@@ -56,6 +56,12 @@ This is performed for all cgnr groups of multiple of 5s (this can vary but in my
 
 # ATP Pyrene Simulation
 
+# cluster size analysis
+
+`gmx clustsize -f md_0_1_noPBC.xtc -s md_0_1.tpr -n index.ndx -mol yes` 
+
+
+
 # gromacs
 Gromacs Version 2021.5
 
