@@ -5,7 +5,7 @@ md simulations around ATP mechanisms using gromacs
 * mehringer et al - 2020 
 
 ## miscellaneous 
-notes for bash / mobaxterm server
+notes for bash / mobaxterm ssh server
 
 ### module Loads
 * `module load apps/intel-19.1/gromacs/2021.5/single` 
