@@ -14,6 +14,3 @@ notes for bash / mobaxterm ssh server for csf3 manchester
 
 ### job files 
 executables notes....
-
-## version
-gromacs version 2021.5
