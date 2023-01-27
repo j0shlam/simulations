@@ -36,6 +36,11 @@ Maybe useful to use `-gmx insert-molecules instead.`
 * `gmx mdrun -v -deffnm md_0_1`
 * `gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_noPBC.xtc -pbc mol -center`
 
+### index notes
+`gmx make_ndx -f em.gro`
+` 1 | 2 | 3 ` to make a group with groups 1 2 3 
+` name 15 Non-ATP ` to rename the new group as Non-ATP
+
 # ATP simulation with Mg
 
 Additional Step required. (Does the MG required to be placed close to phosphate group or will it thermodynamically stabilise within?)
