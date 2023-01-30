@@ -28,7 +28,7 @@ Steinbrecher (2012) reported changing the phosphate oxygen radii (manipulating t
 Exaggerated electrostatic interactions in MD between ionized groups by a factor or 2. Leontyev states the charges of ionized groups and ions should be scaled by 0.7 which results in significant changes in protein dynamics. 
 
 # mehringer ATP aggregation simulation 
-10x10x10 nm\$^3$ box over 50ns for concentrations of 100,200,300 and 400 mM ATP. For the determination of the potential of mean force, the dimensions of the boxes are 4x4x4. (50mM ATP equals 2 ATP molecules in box.)
+10x10x10 nm $\^3$ box over 50ns for concentrations of 100,200,300 and 400 mM ATP. For the determination of the potential of mean force, the dimensions of the boxes are 4x4x4. (50mM ATP equals 2 ATP molecules in box.)
 
 ### md notes
 cutoff of 1.4nm, v-rescale (300K), Parrinello-Rahman barostat (1bar). AmberFF03 and tip4p2005. 
