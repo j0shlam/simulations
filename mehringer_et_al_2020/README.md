@@ -1,7 +1,7 @@
 # mehringer_etal_2020   
 
 # forcefield prep
-Use of Amber03 FF with modifications, the modifications by mehringer (2020) follows as below:
+mehringer uses AMBER03 FF with modifications, the modifications by mehringer (2020) follows as below:
 
 ## [meagher_etal_2002](https://onlinelibrary.wiley.com/doi/10.1002/jcc.10262) 
 
