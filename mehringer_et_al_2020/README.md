@@ -11,7 +11,7 @@ Meagher (2003) produced new parameters for AMBER 94/99 as original AMBER paramet
  
 ## steinbrecher_etal_2012  (Revised AMBER parameters for bioorganic phosphates)[^2].
 
-Steinbrecher (2012) reported changing the phosphate oxygen radii (manipulating the VDW radii to shield the electrostatic interactions with water) prevented the water from getting too close to the oxygen atoms reducing problems from overly strong electrostatic interactions and oversolvation. This also reproduced experimental data such as solvation free energies. 
+Steinbrecher (2012) reported changing the phosphate oxygen radii (manipulating the VDW radii to shield the electrostatic interactions with water) prevented the water from getting too close to the oxygen atoms reducing problems from overly strong electrostatic interactions and oversolvation. This also reproduced experimental data such as solvation free energies.[^2].
 
 [^2] https://pubs.acs.org/doi/pdf/10.1021/ct300613v
 
