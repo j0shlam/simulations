@@ -34,4 +34,4 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
 cutoff of 1.4nm, v-rescale (300K), Parrinello-Rahman barostat (1bar). AmberFF03 and tip4p2005. 
 
 ### si md notes
-gromacs for simulations and trajectory analysis. For the ATP, modified charge parameter, steinbrecher. Sodium Ion parameters developed by [Horinek_etal_](https://aip.scitation.org/doi/pdf/10.1063/1.3081142). Tip4p2005 for description of solvent. Energy minimized by l-bfgs minimization alogrithm. Cutoff of LJ and Coulombic of 0.85nm.
+gromacs for simulations and trajectory analysis. For the ATP, modified charge parameter, steinbrecher. Sodium Ion parameters developed by [Horinek_etal_2009](https://aip.scitation.org/doi/pdf/10.1063/1.3081142). Tip4p2005 for description of solvent. Energy minimized by l-bfgs minimization alogrithm. Cutoff of LJ and Coulombic of 0.85nm.
