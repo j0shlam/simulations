@@ -1,4 +1,4 @@
-# mehringer_etal_2020   
+# [mehringer_etal_2020](https://www.sciencedirect.com/science/article/pii/S266638642100028X?via%3Dihub)   
 
 # forcefield prep
 mehringer uses AMBER03 FF with modifications, the modifications by mehringer (2020) follows as below:
