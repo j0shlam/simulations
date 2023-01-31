@@ -1,12 +1,12 @@
-# ou_et_al_2021
-Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work. (https://pubs.acs.org/doi/10.1021/jacsau.1c00316)
+# [ou_et_al_2021](https://pubs.acs.org/doi/10.1021/jacsau.1c00316)
+Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work.
 
 # files
 * `charmm36_ljpme-jul2021.ff` - CHARMM36 force field - 2021
 * `atp_pro` - ATP simulation files (without Mg 2+)
    * `1iee_clean.pdb` - lyzozyme from PDB code: 1IEE, removed crystallized water and ions using the grep command on HOH CL NA respectively.
-   * `atp.pdb` - ATP PDB sourced from CHARMM-GUI Archive - Small molecule database:
-    https://charmm-gui.org/?doc=archive&lib=csml 
+   * `atp.pdb` - ATP PDB sourced from CHARMM-GUI Archive - [Small molecule database](https://charmm-gui.org/?doc=archive&lib=csml)
+   
    * `ions.mdp` - ions mdp to create a tpr to add ions within PDB. (contents don't matter)
    * `minim.mdp` - mdp file for energy minizimation, for 10,000 steps. 
    * `nvt.mdp` - mdp file for equilibration for NVT ensemble at 300 K.
@@ -87,7 +87,7 @@ notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of
 Image shown as frame exported as `atpmg.pdb`.
 
 # method.2 for ATP-Mg mdrun:
-method was trialled as *Hu et al (2022)* uses this method... (https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.2c01478)
+method was trialled as [*Hu et al (2022)*](https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.2c01478) uses this method... 
 * ATP Mg Complex. Method 2:
 For ATP-Mg Complex. Step 6.1 is added as:
   

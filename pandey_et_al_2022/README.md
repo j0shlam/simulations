@@ -1,6 +1,6 @@
-# pandey_et_al_2022
+# [pandey_et_al_2022](https://pubs.acs.org/doi/full/10.1021/acs.jpcb.2c06077)
 ## overview 
-Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s work. (https://pubs.acs.org/doi/full/10.1021/acs.jpcb.2c06077)
+Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s work.
 | System | ATP | Mg 2+ | Pyrene | NA + | CL -  | Simulation time (ns) | replicas |
 |-  | - | -| -| - | - | - | - |
 | ATP | 30 | 30 | 0 | 68 | 8 | 1000| 1 |
@@ -12,7 +12,7 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 * atp_pan
    * `old_topol.top` - original topology file without modified nucleotide charges
    * `scaledtopol.top` - scaled charge topology file 
-   * `atp.pdb` - ATP PDB sourced from CHARMM-GUI Archive - Small molecule database: https://charmm-gui.org/?doc=archive&lib=csml
+   * `atp.pdb` - ATP PDB sourced from CHARMM-GUI Archive - [Small molecule database](https://charmm-gui.org/?doc=archive&lib=csml)
 
 # ATP simulation without Mg 
 * `gmx insert-molecules -ci atp.pdb -o atp_30box.pdb -box 5 5 5 -nmol 30` - generates a 5nm box with 30 atp molecules 
