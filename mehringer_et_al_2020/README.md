@@ -30,7 +30,13 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
 # mehringer ATP aggregation simulation 
 10x10x10 nm $\^3$ box over 50ns for concentrations of 100,200,300 and 400 mM ATP. For the determination of the potential of mean force, the dimensions of the boxes are 4x4x4. (50mM ATP equals 2 ATP molecules in box.)
 
+
 ### other md notes
  md notes from paper - cutoff of 1.4nm, v-rescale (300K), Parrinello-Rahman barostat (1bar). AmberFF03 and tip4p2005. 
 
  md notes from SI - gromacs for simulations and trajectory analysis. For the ATP, modified charge parameter, steinbrecher. Sodium Ion parameters developed by [Horinek_etal_2009](https://aip.scitation.org/doi/pdf/10.1063/1.3081142). Tip4p2005 for description of solvent. Energy minimized by l-bfgs minimization alogrithm. Cutoff of LJ and Coulombic of 0.85nm.
+
+ # Files
+ * - AMBER03 ff - modified
+ * - [tip4p2005.top]<http://www.sklogwiki.org/SklogWiki/index.php/GROMACS_files_for_the_TIP4P/2005_model> note: change .top to .itp in ff.
+ 
