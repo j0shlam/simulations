@@ -25,7 +25,13 @@ Steinbrecher (2012) reported changing the phosphate oxygen radii (manipulating t
 
 **Electronic Continuum Model for Molecular Dynamics, Simulations of Biological Molecules and Accounting for electronic polarization in non-polarizable force fields**
 
-Exaggerated electrostatic interactions in MD between ionized groups by a factor or 2. Leontyev states the charges of ionized groups and ions should be scaled by 0.7 which results in significant changes in protein dynamics. 
+Exaggerated electrostatic interactions in MD between ionized groups by a factor or 2. Leontyev states the charges of ionized groups and ions should be scaled by 0.7 which results in significant changes in protein dynamics. Therefore changing the charge of the phosphate group and ions within MD in the topology files / ions.itp. 
+
+
+| nr | type | resnr | residue | atom | cgnr  | charge | mass |
+|-  | - | -| -| - | - | - | - |
+| 28 | CN8B | 1 | ATP | C5' | 5 | -0.08 | 12.011 |
+| 28 scaled| CN8B | 1 | ATP | C5' | 5 | -0.056 | 12.011 |
 
 # mehringer ATP aggregation simulation 
 10x10x10 nm $\^3$ box over 50ns for concentrations of 100,200,300 and 400 mM ATP. For the determination of the potential of mean force, the dimensions of the boxes are 4x4x4. (50mM ATP equals 2 ATP molecules in box.)
