@@ -9,7 +9,7 @@ mehringer uses AMBER03 FF with modifications, the modifications by mehringer (20
 
 Meagher (2003) produced new parameters for AMBER 94/99 as original AMBER parameters for monopohsphates did not extend well to polyphorylated molecules such as ATP. Also noted that the new parameters are in excellent agreement with CHARMM by Meagher. 
 
-- `meagher.txt` list the new parameters for AMBER03.ff 
+- `meagheramber03.txt` list the new parameters for AMBER03.ff 
 
 ## [steinbrecher_etal_2012](https://pubs.acs.org/doi/pdf/10.1021/ct300613v)  
 
