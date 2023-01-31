@@ -33,7 +33,7 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
 | 28 | CN8B | 1 | ATP | C5' | 5 | -0.08 | 12.011 |
 | 28 scaled| CN8B | 1 | ATP | C5' | 5 | -0.056 | 12.011 |
 
-# mehringer ATP aggregation simulation 
+# mehringer ATP molecular dynamics parameters
 10x10x10 nm $\^3$ box over 50ns for concentrations of 100,200,300 and 400 mM ATP. For the determination of the potential of mean force, the dimensions of the boxes are 4x4x4. (50mM ATP equals 2 ATP molecules in box.)
 
 
