@@ -38,5 +38,5 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
 
  # Files
  * - AMBER03 ff - modified
- * - [tip4p2005.top]<http://www.sklogwiki.org/SklogWiki/index.php/GROMACS_files_for_the_TIP4P/2005_model> note: change .top to .itp in ff.
+ * - [tip4p2005.top](http://www.sklogwiki.org/SklogWiki/index.php/GROMACS_files_for_the_TIP4P/2005_model) note: change .top to .itp in ff.
  
