@@ -74,7 +74,7 @@ This is performed for all cgnr groups of multiple of 5s (this can vary but in my
 
 * `gmx insert-molecules -f 1AKI_clean.pdb -ci atp.pdb -o atp_31box.gro -box 6 6  6 -nmol 31`
 
-* `gmx pdb2gmx -f 1AKI_atp.gro -o 1AKI_atppro.gro -water tip3p`
+* `gmx pdb2gmx -f atp_31box.gro -o 1AKI_atppro.gro -water tip3p`
 
 * `gmx editconf -f 1AKI_atppro.gro -o atp30_newbox.gro -c -d 1.0 -bt cubic`
 
