@@ -17,6 +17,7 @@ Reproduction of MD ATP and ATP Pyrene simulation from *pandey et al (2022)*'s wo
 # ATP simulation without Mg 
 * `gmx insert-molecules -ci atp.pdb -o atp_30box.pdb -box 5 5 5 -nmol 30` - generates a 5nm box with 30 atp molecules 
 * `gmx pdb2gmx -f atp_30box.pdb -o atp30_pro.gro -water tip3p` - generates topology file
+* `gmx editconf -f atp30_pro.gro -o atp30_newbox.gro -c -d 1.0 -bt cubic -box 5 5 5`
 * topology is modified to scale charges refer to modified nucelotide charges below.
 * `gmx solvate -cp atp30_pro.gro -cs spc216.gro -o atp_solv.gro -p topol.top`
 * `gmx grompp -f ions.mdp -c atp_solv.gro -p topol.top -o ions.tpr`
@@ -69,7 +70,39 @@ This is performed for all cgnr groups of multiple of 5s (this can vary but in my
 
 
 
-# ATP Pyrene Simulation
+# ATP Lysozyme Simulation
+
+* `gmx insert-molecules -f 1AKI -ci atp.pdb -o atp_31box.pdb -box 6 6  6 -nmol 31`
+
+* `gmx pdb2gmx -f 1AKI_atp.gro -o 1AKI_atppro.gro -water tip3p`
+
+* `gmx editconf -f 1AKI_atppro.gro -o atp30_newbox.gro -c -d 1.0 -bt cubic`
+
+* `bash ./scalecharges`
+
+* `gmx solvate -cp atp30_newbox.gro -cs spc216.gro -o atp_solv.gro -p topol.top`
+
+* `gmx grompp -f ions.mdp -c atp_solv.gro -p topol.top -o ions.tpr`
+
+* `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname SOD -np 128 -nname CLA -nn 8 -rmin 0.5`
+
+* `gmx grompp -f minim.mdp -c 1iee_solv_ions.gro -p topol.top -o em.tpr`
+
+* `gmx mdrun -v -deffnm em`
+
+* `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -n index.ndx`
+
+* `gmx mdrun -v -deffnm nvt`
+
+* `gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr -n index.ndx`
+
+* `gmx mdrun -v -deffnm npt`
+
+* `gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr -n index.ndx`
+
+* `gmx mdrun -v -deffnm md_0_1`
+
+* `gmx trjconv -s md_0_1.tpr -f md_0_1.xtc -o md_0_1_noPBC.xtc -pbc mol -center`
 
 # cluster size analysis
 
