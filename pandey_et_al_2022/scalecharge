@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sed -i '/HN8 .* ATP/s_0[.]09_0.054_' topol.top
+sed -i '/CN8B .* ATP/s_0[.]08_0.048_' topol.top
+sed -i '/ON2 .* ATP/s_0[.]86_0.516_' topol.top
+sed -i '/ON2 .* ATP/s_0[.]62_0.372_' topol.top
+sed -i '/ON2 .* ATP/s_0[.]74_0.444_' topol.top
+sed -i '/ON3 .* ATP/s_0[.]82_0.492_' topol.top
+sed -i '/ON3 .* ATP/s_0[.]9_0.54_' topol.top
+sed -i '/P3 .* ATP/s_1[.]5_0.9_' topol.top
+sed -i '/P3 .* ATP/s_1[.]1_0.66_' topol.top
+sed -i '/P .* ATP/s_1[.]5_0.9_' topol.top
