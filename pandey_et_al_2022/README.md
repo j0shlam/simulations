@@ -72,7 +72,7 @@ This is performed for all cgnr groups of multiple of 5s (this can vary but in my
 
 # ATP Lysozyme Simulation
 
-* `gmx insert-molecules -f 1AKI_clean.pdb -ci atp.pdb -o atp_lys.gro -box 6 6  6 -nmol 31`
+* `gmx insert-molecules -f 1AKI_clean.pdb -ci atp.pdb -o atp_lys.gro -box 6 6  6 -nmol 30`
 
 * `gmx pdb2gmx -f atp_lys.gro -o atp_lyspro.gro -water tip3p`
 
