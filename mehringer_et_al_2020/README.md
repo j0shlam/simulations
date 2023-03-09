@@ -62,7 +62,7 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
  - edit topol #include atp 30 and atp_mod.itp in topology.
  - `gmx solvate -cp out.gro -cs tip4p.gro -o atp_solv.gro -p topol.top`
  - `gmx grompp -f ions.mdp -c atp_solv.gro -p topol.top -o ions.tpr -maxwarn 19` 
- - `gmx genion -s ions.tpr -o atp_ions.gro -p topol.top -pname NA -np 140 -nname CL -nn 20
+ - `gmx genion -s ions.tpr -o atp_ions.gro -p topol.top -pname NA -np 140 -nname CL -nn 20`
  - `gmx grompp -f minim.mdp -c atp_ions.gro -p topol.top -o em.tpr -maxwarn 20`
  - `gmx mdrun -v -deffnm em`
  - `gmx energy -f em.edr -o potential.xvg`
