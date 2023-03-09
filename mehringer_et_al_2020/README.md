@@ -56,7 +56,7 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
  - `antechamber -i ATP.prep -fi 5 -o atp -fo 3` 
  - `acpyte -i atp.pdb -n -4 -a amber` 
  
- ## Lysozyme Run 
+ ## ATP Lysozyme Run 
  - `gmx pdb2gmx -f 1AKI_clean.pdb -o 1AKI_pro.gro -water tip4p`
  - `gmx insert-molecules -f 1AKI_pro.gro -ci atp_GMX.gro -nmol 30 -box 10 10 10`
  - edit topol #include atp 30 and atp_mod.itp in topology.
@@ -67,7 +67,24 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
  - `gmx mdrun -v -deffnm em`
  - `gmx energy -f em.edr -o potential.xvg`
  - `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -maxwarn 20`
- - `gmx mdrun -v -deffnm nvt` 
- - 
+ - `gmx mdrun -v -deffnm nvt`
+ - `gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr -maxwarn 20`
+ - `gmx mdrun -v -deffnm npt` 
+ - `
+
+## ATP Run
+- `gmx insert-molecules -ci atp_GMX.gro -o atp_30.gro -nmol 30 -box 5 5 5`
+- `gmx solvate -cp atp_30.gro -cs tip4p.gro -o atp_solv.gro -p topol.top`
+- `gmx grompp -f ions.mdp -c atp_solv.gro -p topol.top -o ions.tpr -maxwarn 19`
+- `gmx genion -s ions.tpr -o atp_ions.gro -p topol.top -pname NA -np 141 -nname CL -nn 10 -rmin 0.5`
+- `gmx grompp -f minim.mdp -c atp_ions.gro -p topol.top -o em.tpr -maxwarn 20`
+- `gmx mdrun -v -deffnm em`
+- `gmx make_ndx -f em.gro` - make [ non-atp ]
+- `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -maxwarn 20`
+- `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -n index.ndx -maxwarn 20`
+- `gmx mdrun -v -deffnm nvt`
+- `
+
+
 
 
