@@ -47,7 +47,6 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
  # files
  - AMBER03.ff - modified
  - [tip4p2005.top](http://www.sklogwiki.org/SklogWiki/index.php/GROMACS_files_for_the_TIP4P/2005_model) note: change .top to .itp in ff.
- - [atp.pdb](https://charmm-gui.org/?doc=archive&lib=csml)
  - 
  
  ## Antechamber and Acepyte for conversion of [Amber Parameters from Richard Bryce for ATP](http://amber.manchester.ac.uk)
@@ -57,3 +56,18 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
  - `antechamber -i ATP.prep -fi 5 -o atp -fo 3` 
  - `acpyte -i atp.pdb -n -4 -a amber` 
  
+ ## Lysozyme Run 
+ - `gmx pdb2gmx -f 1AKI_clean.pdb -o 1AKI_pro.gro -water tip4p`
+ - `gmx insert-molecules -f 1AKI_pro.gro -ci atp_GMX.gro -nmol 30 -box 10 10 10`
+ - edit topol #include atp 30 and atp_mod.itp in topology.
+ - `gmx solvate -cp out.gro -cs tip4p.gro -o atp_solv.gro -p topol.top`
+ - `gmx grompp -f ions.mdp -c atp_solv.gro -p topol.top -o ions.tpr -maxwarn 19` 
+ - `gmx genion -s ions.tpr -o atp_ions.gro -p topol.top -pname NA -np 140 -nname CL -nn 20
+ - `gmx grompp -f minim.mdp -c atp_ions.gro -p topol.top -o em.tpr -maxwarn 20`
+ - `gmx mdrun -v -deffnm em`
+ - `gmx energy -f em.edr -o potential.xvg`
+ - `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -maxwarn 20`
+ - `gmx mdrunb -v -deffnm nvt` 
+ - 
+
+
