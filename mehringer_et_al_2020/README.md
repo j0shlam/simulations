@@ -50,7 +50,7 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
  - [atp.pdb](https://charmm-gui.org/?doc=archive&lib=csml)
  - 
  
- # Antechamber and Acepyte for conversion of [Amber Parameters from Richard Bryce for ATP](http://amber.manchester.ac.uk)
+ ## Antechamber and Acepyte for conversion of [Amber Parameters from Richard Bryce for ATP](http://amber.manchester.ac.uk)
  - [Antechamber]() - used to convert Amber PREP files to Mol2/PDB. 
  - [Acpyte](https://github.com/alanwilter/acpype) - used to convert Mol2/PDB/PRMTOP Amber format files to GROMACS. 
  - `antechamber -i ATP.prep -fi 5 -o atp -fo 3` 
