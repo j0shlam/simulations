@@ -67,7 +67,7 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
  - `gmx mdrun -v -deffnm em`
  - `gmx energy -f em.edr -o potential.xvg`
  - `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -maxwarn 20`
- - `gmx mdrunb -v -deffnm nvt` 
+ - `gmx mdrun -v -deffnm nvt` 
  - 
 
 
