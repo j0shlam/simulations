@@ -70,7 +70,8 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
  - `gmx mdrun -v -deffnm nvt`
  - `gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr -maxwarn 20`
  - `gmx mdrun -v -deffnm npt` 
- - `
+ - `gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr -n index.ndx`
+ - `gmx mdrun -v -deffnm md_0_1`
 
 ## ATP Run
 - `gmx insert-molecules -ci atp_GMX.gro -o atp_30.gro -nmol 30 -box 5 5 5`
@@ -80,11 +81,12 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
 - `gmx grompp -f minim.mdp -c atp_ions.gro -p topol.top -o em.tpr -maxwarn 20`
 - `gmx mdrun -v -deffnm em`
 - `gmx make_ndx -f em.gro` - make [ non-atp ]
-- `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -maxwarn 20`
 - `gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr -n index.ndx -maxwarn 20`
 - `gmx mdrun -v -deffnm nvt`
 - `gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr -maxwarn 20 -n index.ndx`
 - `gmx mdrun -v -deffnm npt` 
+- `gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr -n index.ndx`
+- `gmx mdrun -v -deffnm md_0_1`
 
 
 
