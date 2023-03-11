@@ -55,6 +55,7 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
  - [Acpyte](https://github.com/alanwilter/acpype) - used to convert Mol2/PDB/PRMTOP Amber format files to GROMACS. 
  - `antechamber -i ATP.prep -fi 5 -o atp -fo 3` 
  - `acpyte -i atp.pdb -n -4 -a amber` 
+ - Note - need to rewrite charges from PREP file or charges are not correct.
  
  ## ATP Lysozyme Run 
  - `gmx pdb2gmx -f 1AKI_clean.pdb -o 1AKI_pro.gro -water tip4p`
