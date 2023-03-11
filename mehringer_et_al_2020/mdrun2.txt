@@ -1,0 +1,6 @@
+#!/bin/bash --login
+#$ -cwd
+#$ -pe mpi-24-ib.pe 72          # EG: Two 24-core Intel Haswell nodes
+module load apps/intel-19.1/gromacs/2021.5/single_mpi
+mpirun -n $NSLOTS gmx_mpi mdrun -v -deffnm md_0_1
+

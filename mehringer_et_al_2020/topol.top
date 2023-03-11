@@ -1,0 +1,31 @@
+; Include forcefield parameters
+#include "./mehringeramber03.ff/forcefield.itp"
+
+; Include water topology
+#include "./mehringeramber03.ff/tip4p.itp"
+#include "atp_mod.itp"
+
+
+; Include Position restraint file
+#ifdef POSRES
+#include "posre_atp.itp"
+#endif
+
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./mehringeramber03.ff/ions.itp"
+
+[ system ]
+; Name
+atp solution in water
+
+[ molecules ]
+; Compound        #mols
+atp              50

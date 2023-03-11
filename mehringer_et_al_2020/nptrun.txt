@@ -1,0 +1,7 @@
+#!/bin/bash --login
+#$ -cwd
+#$ -pe smp.pe 24            # Can specify 2 to 32 cores in smp.pe
+                           
+module load apps/intel-19.1/gromacs/2021.5/single
+export OMP_NUM_THREADS=$NSLOTS
+gmx mdrun -v -deffnm npt
