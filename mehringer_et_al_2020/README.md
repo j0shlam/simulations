@@ -47,7 +47,7 @@ Exaggerated electrostatic interactions in MD between ionized groups by a factor 
  # files
  - AMBER03.ff - modified
  - [tip4p2005.top](http://www.sklogwiki.org/SklogWiki/index.php/GROMACS_files_for_the_TIP4P/2005_model) note: change .top to .itp in ff.
- - 
+ - Contain topology files and molecular dynamic parameter files for gromacs.
  
  ## Antechamber and Acepyte for conversion of [Amber Parameters from Richard Bryce for ATP](http://amber.manchester.ac.uk)
  - Note: richard bryce ATP AMBER parameters include Meagher 2003 parameters.
