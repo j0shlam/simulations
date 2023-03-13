@@ -28,6 +28,17 @@ notes from *ou_et_al* for mdp:
 - 12 angstrom cutoff distance
 - LINCS algorithm to restrain bonds
 
+# NOTE: ATP-MG CLUSTER RUN 13/03/23
+
+- Introduce [Allner etal 2012](https://pubmed.ncbi.nlm.nih.gov/26596759/) - Magnesium LJ parameters]
+|  | $\epsilon$ $_{lj}$ | $\epsilon$ $_{new}$ | $r_{orig}$ | $r_{opt}$ |
+|-  | - | -| -| -|
+| Mg | 0.00627600 | 0.0123428  | 0.211142996199 | 0.2770000000| 
+
+
+
+
+
 # method. for ATP mdrun
 notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of 12.6nm per side and solvated with TIP3P water model. 
   * Setting up the simulation within gromacs via:
@@ -94,7 +105,7 @@ For ATP-Mg Complex. Step 6.1 is added as:
  6.1. Add 20 Mg 2+ to system: `gmx genion -s ions.tpr -o 1iee_solv_mg.gro -p topol.top -pname MG -pq 2 -np 20`
 
  6.2.  Add 150mM NaCl to system `gmx genion -s ions.tpr -o 1iee_solv_ions.gro -p topol.top -pname SOD -nname CLA -conc 0.15 -neutral`
- 
+
 and continue with ATP mdrun method. 
 # gromacs
 Gromacs version - 2021.5
