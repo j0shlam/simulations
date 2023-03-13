@@ -40,7 +40,7 @@ notes from *ou_et_al* for mdp:
 
 
 
-# method. for ATP mdrun
+# OLD OLD OLD method. for ATP mdrun
 notes from *ou_et_al* for prep: 20 ATP molecules are added, using a cubic box of 12.6nm per side and solvated with TIP3P water model. 
   * Setting up the simulation within gromacs via:
   1. Initial structure of lysozyme and ATP `gmx insert-molecules -f 1iee_clean.pdb -ci atp.pdb -o 1iee_atp.gro -nmol 20 `
