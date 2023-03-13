@@ -2,6 +2,9 @@
 Reproduction of MD ATP simulation with lysozyme from *Ou et al (2021)*'s work.
 
 # files
+## NEW
+* `ou_atp_ref`
+## OLD
 * `charmm36_ljpme-jul2021.ff` - CHARMM36 force field - 2021
 * `atp_pro` - ATP simulation files (without Mg 2+)
    * `1iee_clean.pdb` - lyzozyme from PDB code: 1IEE, removed crystallized water and ions using the grep command on HOH CL NA respectively.
