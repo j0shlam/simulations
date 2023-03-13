@@ -32,7 +32,7 @@ notes from *ou_et_al* for mdp:
 
 - Introduce [Allner etal 2012](https://pubmed.ncbi.nlm.nih.gov/26596759/) - Magnesium LJ parameters]
 
-|  | $\epsilon$ $_{lj}$ | $\epsilon$ $_{new}$ | $r_{orig}$ | $r_{opt}$ |
+|  | $\epsilon$ $_{lj}$ | $\epsilon$ $_{new}$ | $r_{orig}$ | $r_{new}$ |
 |-  | - | -| -| -|
 | Mg | 0.00627600 | 0.0123428  | 0.211142996199 | 0.2770000000| 
 
