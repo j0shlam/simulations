@@ -36,6 +36,15 @@ notes from *ou_et_al* for mdp:
 |-  | - | -| -| -|
 | Mg | 0.00627600 | 0.0123428  | 0.211142996199 | 0.2770000000| 
 
+- `gmx insert-molecules -ci atp.pdb -o atp_20.gro -nmol 20 -box 4 4 4`
+- `gmx solvate -cp atp_20.gro -cs spc216.gro -o atp_solv.gro -p topol.top`
+- `gmx grompp -f ions.mdp -c atp_solv.gro -p topol.top -o ions.tpr`
+- `gmx genion -s ions.tpr -o atp_mg.gro -p topol.top -pname MGA -np 20`
+- `gmx grompp -f ions.mdp -c atp_mg.gro -p topol.top -o ions2.tpr`
+- `gmx genion -s ions2.tpr -o atp_ions.gro -p topol.top -pname SOD -nname CLA -conc 0.15 -neutral`
+- `gmx grompp -f minim.mdp -c atp_ions.gro -p topol.top -o em.tpr`
+- `gmx mdrun -v -deffnm em`
+- 
 
 
 
