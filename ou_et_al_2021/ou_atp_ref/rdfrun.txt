@@ -1,0 +1,50 @@
+#!/bin/bash --login
+#$ -cwd
+#$ -pe smp.pe 2            # Can specify 2 to 32 cores in smp.pe
+                           
+module load apps/intel-19.1/gromacs/2021.5/single
+export OMP_NUM_THREADS=$NSLOTS
+
+#ASP-CA -VE oxygen
+
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ASP18_N-CA.xvg -bin 0.05 -ref 19 -sel 16
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ASP48_N-CA.xvg -bin 0.05 -ref 20 -sel 16
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ASP52_N-CA.xvg -bin 0.05 -ref 21 -sel 16
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ASP66_N-CA.xvg -bin 0.05 -ref 22 -sel 16
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ASP87_N-CA.xvg -bin 0.05 -ref 23 -sel 16
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ASP101_N-CA.xvg -bin 0.05 -ref 24 -sel 16
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ASP119_N-CA.xvg -bin 0.05 -ref 25 -sel 16
+
+#GLU-CA -VE oxygen
+
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o GLU7_N-CA.xvg -bin 0.05 -ref 26 -sel 16
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o GLU35_N-CA.xvg -bin 0.05 -ref 27 -sel 16
+
+#LYS-CL N-terminal CL
+
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o LYS1_N-CL.xvg -bin 0.05 -ref 28 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o LYS13_N-CL.xvg -bin 0.05 -ref 29 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o LYS33_N-CL.xvg -bin 0.05 -ref 30 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o LYS96_N-CL.xvg -bin 0.05 -ref 31 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o LYS97_N-CL.xvg -bin 0.05 -ref 32 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o LYS116_N-CL.xvg -bin 0.05 -ref 33 -sel 17
+
+#ARG-CL N-terminal CL
+
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ARG5_N-CL.xvg -bin 0.05 -ref 34 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ARG14_N-CL.xvg -bin 0.05 -ref 35 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ARG21_N-CL.xvg -bin 0.05 -ref 36 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ARG45_N-CL.xvg -bin 0.05 -ref 37 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ARG61_N-CL.xvg -bin 0.05 -ref 38 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ARG68_N-CL.xvg -bin 0.05 -ref 39 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ARG73_N-CL.xvg -bin 0.05 -ref 40 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ARG112_N-CL.xvg -bin 0.05 -ref 41 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ARG114_N-CL.xvg -bin 0.05 -ref 42 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ARG125_N-CL.xvg -bin 0.05 -ref 43 -sel 17
+gmx rdf -f md_0_1.xtc -s md_0_1.tpr -n index.ndx -o ARG128_N-CL.xvg -bin 0.05 -ref 44 -sel 17
+
+
+
+
+
+
